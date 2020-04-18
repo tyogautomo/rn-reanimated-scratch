@@ -1,3 +1,5 @@
+import { Menu } from '../screen/Menu/Menu.screen';
 import { Values } from '../screen/Values/Values.screen';
+import { Transitions } from '../screen/Transition/Transition.screen';
 
-export { Values };
+export { Menu, Values, Transitions };

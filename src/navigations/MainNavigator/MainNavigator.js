@@ -1,15 +1,17 @@
 import React from 'react';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import { Values } from '../screenConfig';
+import { Values, Transitions, Menu } from '../screenConfig';
 
-const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
 const MainNavigator = () => {
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen component={Values} name="Values" />
-    </Drawer.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen component={Menu} name="Menu" options={{ headerShown: false }} />
+      <Stack.Screen component={Values} name="Values" />
+      <Stack.Screen component={Transitions} name="Transitions" />
+    </Stack.Navigator>
   );
 };
 
